@@ -1,0 +1,115 @@
+# Caredex - Scanner de voitures
+
+Application mobile et web permettant de scanner et d'identifier des véhicules Peugeot, Renault et FIAT, avec accès aux spécifications techniques et aux actualités automobiles.
+
+## 🚀 Fonctionnalités
+
+- Reconnaissance de véhicules par photo
+- Base de données complète des spécifications (Peugeot, Renault, FIAT)
+- Actualités automobiles en temps réel
+- Localisation des garages à proximité
+- Interface adaptative (desktop/mobile)
+- Mode sombre/clair
+- Application mobile native (Android)
+
+## 🛠️ Technologies
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Supabase
+- **IA/ML**: TensorFlow.js, Hugging Face
+- **Mobile**: NativeScript
+- **Cartographie**: Leaflet
+- **Autres**: Vite, Lucide Icons
+
+## 📁 Structure du projet
+
+```
+caredex/
+├── src/
+│   ├── components/     # Composants React
+│   ├── hooks/         # Hooks personnalisés
+│   ├── lib/           # Utilitaires et services
+│   ├── screens/       # Écrans de l'application mobile
+│   └── App.tsx        # Point d'entrée React
+├── supabase/
+│   └── migrations/    # Migrations de la base de données
+├── App_Resources/     # Ressources natives (Android)
+└── public/           # Assets statiques
+```
+
+## 🔧 Installation
+
+1. Cloner le dépôt :
+```bash
+git clone https://github.com/votre-username/caredex.git
+cd caredex
+```
+
+2. Installer les dépendances :
+```bash
+npm install
+```
+
+3. Configurer les variables d'environnement :
+```bash
+cp .env.example .env
+```
+Remplir les variables dans `.env` avec vos clés API.
+
+4. Démarrer le serveur de développement :
+```bash
+npm run dev
+```
+
+## 📱 Build Mobile
+
+Pour Android :
+```bash
+npm run android
+```
+
+## 🗄️ Base de données
+
+La base de données utilise Supabase avec les tables suivantes :
+- `vehicles` : Véhicules scannés
+- `vehicle_history` : Historique des véhicules
+- `peugeot_specs` : Spécifications Peugeot
+- `renault_specs` : Spécifications Renault
+- `fiat_specs` : Spécifications FIAT
+- `news_articles` : Actualités automobiles
+- `notifications` : Notifications utilisateurs
+- `vehicle_images` : Images et caractéristiques des véhicules
+
+## 🔐 Sécurité
+
+- Row Level Security (RLS) activé sur toutes les tables
+- Authentification utilisateur via Supabase
+- Validation des données avec Zod
+- Gestion sécurisée des images
+
+## 📦 Dépendances principales
+
+```json
+{
+  "@huggingface/inference": "^2.6.4",
+  "@nativescript/core": "^8.6.2",
+  "@supabase/supabase-js": "^2.39.3",
+  "@tensorflow/tfjs": "^4.17.0",
+  "leaflet": "^1.9.4",
+  "react": "^18.3.1",
+  "react-nativescript": "^5.0.0",
+  "zod": "^3.22.4"
+}
+```
+
+## 🤝 Contribution
+
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. Commit les changements (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`)
+4. Push vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
+5. Ouvrir une Pull Request
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
